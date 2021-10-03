@@ -12,13 +12,16 @@
     --text-black-700: #555555;
     --text-black-600: #666666;
     --text-black-300: #BBBBBB;
-
+    --outer-shadow: 3px 3px 3px #D0D0D0, -3px -3px 3px #F8F8F8;
+    --outer-shadow-0: 0 0 0 #D0D0D0, 0 0 0 #F8F8F8;
+    --inner-shadow: insert 3px 3px 3px #D0D0D0, -3px -3px 3px #F8F8F8; 
 }
 
 body {
     font-size: 16px;
     line-height: 1.5;
     overflow-x: hidden;
+    background-color: var(--bg-black-50);
 }
 
 *:not(i) {
@@ -66,6 +69,30 @@ img {
     justify-content: space-between;
 }
 
+.outer-shadow {
+    box-shadow: var(--outer-shadow);
+}
+
+.hover-in-shadow {
+    position: relative;
+    z-index: 1;
+}
+
+.hover-in-shadow:hover {
+    box-shadow: var(--outer-shadow-0);
+}
+
+.hover-in-shadow:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+
 /* Header */
 
 .header {
@@ -93,10 +120,12 @@ img {
 .header .hamburger-btn {
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .header .hamburger-btn span {
