@@ -14,7 +14,7 @@
     --text-black-300: #BBBBBB;
     --outer-shadow: 3px 3px 3px #D0D0D0, -3px -3px 3px #F8F8F8;
     --outer-shadow-0: 0 0 0 #D0D0D0, 0 0 0 #F8F8F8;
-    --inner-shadow: insert 3px 3px 3px #D0D0D0, -3px -3px 3px #F8F8F8; 
+    --inner-shadow: inset 3px 3px 3px #D0D0D0, -3px -3px 3px #F8F8F8; 
 }
 
 body {
@@ -92,6 +92,9 @@ img {
     transition: all 0.3s ease;
 }
 
+.hover-in-shadow:hover:after {
+    box-shadow: var(--inner-shadow);
+}
 
 /* Header */
 
@@ -128,6 +131,10 @@ img {
     transition: all 0.3s ease;
 }
 
+.header .hamburger-btn:after {
+    border-radius: 50%;
+}
+
 .header .hamburger-btn span {
     display: block;
     height: 2px;
@@ -152,3 +159,5 @@ img {
 .header .hamburger-btn span::after {
     top: 6px;
 }
+
+/* Navigation menu */
