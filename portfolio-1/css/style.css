@@ -582,7 +582,8 @@ img {
 .about-section .skills .skill-item p {
     font-size: 16px;
     color: var(--text-black-600);
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
+    text-transform: uppercase;
     margin: 0 0 10px;
 }
 
@@ -609,4 +610,34 @@ img {
     font-weight: 500;
     color: var(--text-black-600);
     margin-top: -40px;
+}
+
+.about-section .experience {
+    /* background-color: red; */
+    padding-bottom: 80px;
+}
+
+.about-section .timeline {
+    /* background-color: blue; */
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about-section .timeline .timeline-item {
+    /* background-color: green; */
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about-section .timeline .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 50px);
+}
+
+.about-section .timeline .timeline-item:nth-child(even) {
+    padding-left: calc(50% + 50px);
+}
+
+.about-section .timeline .timeline-item-inner {
+    padding: 30px;
+    border-radius: 5px;
 }
