@@ -566,6 +566,11 @@ img {
     /* background-color: red; */
     flex: 0 0 100%;
     width: 100%;
+    display: none;
+}
+
+.about-section .tab-content.active {
+    display: block;
 }
 
 .about-section .skills {
@@ -612,10 +617,13 @@ img {
     margin-top: -40px;
 }
 
-.about-section .experience {
+.about-section .experience,
+.about-section .education {
     /* background-color: red; */
     padding-bottom: 80px;
 }
+
+
 
 .about-section .timeline {
     /* background-color: blue; */
