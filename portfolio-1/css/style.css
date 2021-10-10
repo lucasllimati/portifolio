@@ -230,6 +230,7 @@ img {
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .section-title h2 {
@@ -460,4 +461,29 @@ img {
     /* background-color: red; */
     padding: 80px 0 80px;
     min-height: 100vh;
+}
+
+.about-section .about-img {
+    /* background-color: blue; */
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 15px;
+}
+
+.about-section .about-img .img-box {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.about-section .about-img .img-box img {
+    width: 100%;
+    border: 10px solid transparent;
+    border-radius: 5px;
+}
+
+.about-section .about-info {
+    /* background-color: red; */
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 15px;
 }
