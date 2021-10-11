@@ -23,6 +23,7 @@ body {
     line-height: 1.5;
     overflow-x: hidden;
     background-color: var(--bg-black-50);
+    overflow-y: hidden;
 }
 *:not(i) {
     font-size: 'Raleway', sans-serif;
@@ -764,7 +765,6 @@ img {
 .portfolio-section .filter-item.active {
     color: var(--skin-color);
 }
-
 .portfolio-section  .portfolio-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
@@ -772,7 +772,6 @@ img {
     display: flex;
     flex-wrap: wrap;
 }
-
 .portfolio-section  .portfolio-item-inner {
     padding: 15px;
     border-radius: 5px;
@@ -780,20 +779,16 @@ img {
     width: 100%;
     transition: all 0.3s ease;
 }
-
 .portfolio-section  .portfolio-item-img img {
     border-radius: 5px;
     width: 100%;
 }
-
 .portfolio-section  .portfolio-item-inner:hover .portfolio-item-img img {
     transform: translateY(-25px);
 }
-
 .portfolio-section  .portfolio-item-img {
     position: relative;
 }
-
 .portfolio-section  .portfolio-item-img .view-project {
     text-transform: capitalize;
     font-size: 16px;
@@ -807,19 +802,61 @@ img {
     z-index: -1;
     opacity: 0;
 }
-
 .portfolio-section  .portfolio-item-inner:hover .view-project {
     transform: translateY(0px);
     opacity: 1;
 }
-
 .portfolio-section  .portfolio-item-details {
     display: none;
 }
-
 .portfolio-section  .portfolio-item-inner p {
     font-size: 16px;
     margin: 10px 0 0;
     color: var(--text-black-600);
     text-transform: capitalize;
+}
+
+
+/* portfolio popup*/
+.portfolio-popup {
+    background-color: var(--bg-black-50);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+}
+.portfolio-popup .pp-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+.portfolio-popup .pp-main {
+    /* background-color: blue; */
+    min-height: 100vh;
+    max-width: 1350px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-popup .pp-main-inner {
+    background-color: violet;
+    padding: 70px 0 50px;
+    position: relative;
+}
+.portfolio-popup .pp-project-details-btn {
+    position: absolute;
+    left: 0;
+    background-color: red;
+}
+.portfolio-popup .pp-close{
+    position: absolute;
+    right: 0;
+    background-color: blue;
 }
