@@ -817,7 +817,7 @@ img {
 }
 
 
-/* portfolio popup*/
+/* portfolio popup */
 .portfolio-popup {
     background-color: var(--bg-black-50);
     position: fixed;
@@ -846,17 +846,55 @@ img {
     justify-content: center;
 }
 .portfolio-popup .pp-main-inner {
-    background-color: violet;
+    /* background-color: violet; */
     padding: 70px 0 50px;
     position: relative;
 }
 .portfolio-popup .pp-project-details-btn {
+    /* background-color: red; */
     position: absolute;
     left: 0;
-    background-color: red;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--skin-color);
+    top: 15px;
+    cursor: pointer;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    transition: all 0.3s ease;
 }
-.portfolio-popup .pp-close{
+.portfolio-popup .pp-project-details-btn i {
+    margin-left: 4px;
+}
+.portfolio-popup .pp-project-details-btn:after {
+    border-radius: 30px;
+}
+.portfolio-popup .pp-close {
+    /* background-color: blue; */
     position: absolute;
     right: 0;
-    background-color: blue;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    top: 15px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 35px;
+    color: var(--text-black-600);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.portfolio-popup .pp-close:after {
+    border-radius: 50%;
+}
+.portfolio-popup .pp-counter {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    bottom: 5px;
+    font-size: 16px;
+    color: var(--text-black-600);
 }
