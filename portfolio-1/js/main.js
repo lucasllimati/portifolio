@@ -86,6 +86,7 @@ function bodyScrollingToggle() {
       slideIndex = 0;
       popupToggle();
       popupSlideshow();
+      popDetails();
     }
   })
 
@@ -113,7 +114,7 @@ function bodyScrollingToggle() {
     popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " de " + screenshots.length;
   }
 
-  // nest slide
+  // next slide
   nextBtn.addEventListener("click", () => {
     if(slideIndex === screenshots.length - 1) {
       slideIndex = 0;
@@ -122,6 +123,39 @@ function bodyScrollingToggle() {
       slideIndex++;
     }
     popupSlideshow();
+    console.log("SlideIndex: "+ slideIndex);
   })
+  
+  // prev slide
+  prevBtn.addEventListener("click", () => {
+    if(slideIndex === 0) {
+      slideIndex = screenshots.length - 1;
+    }
+    else {
+      slideIndex--;
+    }
+    popupSlideshow();
+    console.log("SlideIndex: "+ slideIndex);
+  })
+
+  projectDetailsBtn.addEventListener("click", () => {
+    popupDetailsToggle();
+  })
+
+  function popupDetailsToggle() {
+    projectDetailsBtn.querySelector("i").classList.add("fa-plus")
+    projectDetailsBtn.querySelector("i").classList.remove("fa-minus")
+    if(projectDetailsContainer.classList.contains("active")) {
+      projectDetailsContainer.classList.remove("active");
+      projectDetailsContainer.style.maxHeight = 0 + "px";
+    }
+    else {
+      projectDetailsBtn.querySelector("i").classList.remove("fa-plus")
+      projectDetailsBtn.querySelector("i").classList.add("fa-minus")
+      projectDetailsContainer.classList.add("active");
+      projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+      popip.scrollTo(0, projectDetailsContainer.offsetTop);
+    }
+  }
 
 })();
