@@ -91,7 +91,11 @@ function bodyScrollingToggle() {
   }
 
   function popupSlideshow() {
-    
+    const imgSrc = screenshots[slideIndex];
+    const popupImg = popup.querySelector(".pp-img");
+
+    // activate loader untul the popupImg
+    popupImg.src = imgSrc;
   }
 
 })();
