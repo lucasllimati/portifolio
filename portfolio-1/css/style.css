@@ -24,6 +24,9 @@ body {
     overflow-x: hidden;
     background-color: var(--bg-black-50);
 }
+body.stop-scrolling {
+    overflow-y: hidden;
+}
 *:not(i) {
     font-size: 'Raleway', sans-serif;
     font-weight: 400;
@@ -771,6 +774,13 @@ img {
     display: flex;
     flex-wrap: wrap;
 }
+.portfolio-section  .portfolio-item.hide {
+    display: none;
+}
+.portfolio-section  .portfolio-item.show {
+    display: block;
+    animation: fadeInTop 0.5s ease;
+}
 .portfolio-section  .portfolio-item-inner {
     padding: 15px;
     border-radius: 5px;
@@ -825,9 +835,14 @@ img {
     width: 100%;
     height: 100%;
     z-index: 1000;
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.3s ease;
+}
+.portfolio-popup.open {
+    visibility: visible;
+    opacity: 1;
 }
 .portfolio-popup .pp-details {
     /* background-color: red; */
