@@ -25,7 +25,7 @@
 })();
 
 function bodyScrollingToggle() {
-  document.body.classList.toggle("stop-scrolling");
+  document.body.classList.toggle("hidden-scrolling");
 }
 
 // portfolio filter and popup
@@ -86,12 +86,15 @@ function bodyScrollingToggle() {
       slideIndex = 0;
       popupToggle();
       popupSlideshow();
-      popDetails();
+      popupDetails();
     }
   })
 
   closeBtn.addEventListener("click", () => {
     popupToggle();
+    if(projectDetailsContainer.classList.contains("active")) {
+      popupDetailsToggle();
+    }
   })
 
   function popupToggle() {
@@ -123,7 +126,7 @@ function bodyScrollingToggle() {
       slideIndex++;
     }
     popupSlideshow();
-    console.log("SlideIndex: "+ slideIndex);
+    // console.log("SlideIndex: "+ slideIndex);
   })
   
   // prev slide
@@ -135,8 +138,32 @@ function bodyScrollingToggle() {
       slideIndex--;
     }
     popupSlideshow();
-    console.log("SlideIndex: "+ slideIndex);
+    // console.log("SlideIndex: "+ slideIndex);
   })
+
+  function popupDetails() {
+    // if portfolio-item-details not exists
+    if(!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
+      projectDetailsBtn.style.display = "none";
+      return; //end function execution
+    }
+    projectDetailsBtn.style.display = "block";
+
+    // get the project details
+    const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+    // set the project details
+    popup.querySelector(".pp-project-details").innerHTML = details;
+    
+    // get the project title
+    const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML;
+    // set the project title
+    popup.querySelector(".pp-title h2").innerHTML = title;
+    
+    // get the project category
+    const category = portfolioItems[itemIndex].getAttribute("data-category");
+    // set the project category
+    popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ");
+  }
 
   projectDetailsBtn.addEventListener("click", () => {
     popupDetailsToggle();
@@ -154,7 +181,7 @@ function bodyScrollingToggle() {
       projectDetailsBtn.querySelector("i").classList.add("fa-minus")
       projectDetailsContainer.classList.add("active");
       projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
-      popip.scrollTo(0, projectDetailsContainer.offsetTop);
+      popup.scrollTo(0, projectDetailsContainer.offsetTop);
     }
   }
 
