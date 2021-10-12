@@ -1,4 +1,3 @@
-
 // about section tabs
 (() => {
     const aboutSection = document.querySelector(".about-section"),
@@ -22,3 +21,11 @@
           }
     })
 })();
+
+// portfolio filter and popup
+(() => {
+  const filterContainer = document.querySelector(".portfolio-filter"),
+  portfolioItemsContainer = document.querySelector(".portfolio-items"),
+  portfolioItems = document.querySelectorAll(".portfolio-item"),
+  popup = document.querySelector(".portfolio-popup")
+})
