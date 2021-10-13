@@ -1078,12 +1078,14 @@ img {
 }
 .testimonial-section .testi-slider-container {
     display: flex;
-    transition: all 1s ease
+    transition: all 1s ease;
+    align-items: center;
 }
 .testimonial-section .testi-item {
     padding: 30px;
     text-align: center;
     position: relative;
+    /* background-color: red; */
 }
 .testimonial-section .testi-item i {
     position: absolute;
