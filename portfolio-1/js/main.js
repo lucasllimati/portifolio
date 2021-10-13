@@ -28,6 +28,7 @@ function bodyScrollingToggle() {
   document.body.classList.toggle("hidden-scrolling");
 }
 
+
 // portfolio filter and popup
 (() => {
   
@@ -184,5 +185,47 @@ function bodyScrollingToggle() {
       popup.scrollTo(0, projectDetailsContainer.offsetTop);
     }
   }
+
+})();
+
+
+// testimonial slides
+(() => {
+
+  const sliderContainer = document.querySelector(".testi-slider-container"),
+  slides = sliderContainer.querySelectorAll(".testi-item"),
+  slideWidth = sliderContainer.offsetWidth,
+  prevBtn = document.querySelector(".testi-slider-nav .prev"),
+  nextBtn = document.querySelector(".testi-slider-nav .next");
+
+  let slideIndex = 0;
+
+  // set width of all slide
+  slides.forEach((slide) => {
+    slide.style.width = slideWidth + "px";
+  })
+
+  // set width of sliderContainer
+  sliderContainer.style.width = slideWidth * slides.length + "px";
+
+  nextBtn.addEventListener("click", () => {
+    if(slideIndex === slides.length - 1) {
+      slideIndex = 0;
+    }
+    else {
+      slideIndex++;
+    }
+    sliderContainer.style.marginLeft = - (slideWidth * slideIndex) + "px";
+  })
+
+  prevBtn.addEventListener("click", () => {
+    if(slideIndex === 0) {
+      slideIndex = slides.length - 1;
+    }
+    else {
+      slideIndex--;
+    }
+    sliderContainer.style.marginLeft = - (slideWidth * slideIndex) + "px";
+  })
 
 })();
