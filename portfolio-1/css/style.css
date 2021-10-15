@@ -1156,11 +1156,13 @@ img {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     padding: 15px;
+    display: flex;
 }
 .contact-section .contact-item-inner {
     padding: 30px 15px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 5px;    
+    width: 100%;
 }
 .contact-section .contact-item-inner i {
     font-size: 25px;
@@ -1171,7 +1173,7 @@ img {
     font-size: 16px;
     font-weight: 600;
     color: var(--text-black-700);
-    margin: 10px 0 5px;
+    margin: 15px 0 10px;
     text-transform: capitalize;
 }
 .contact-section .contact-item-inner p {
@@ -1179,4 +1181,5 @@ img {
     color: var(--text-black-600);
     line-height: 26px;
     margin: 0;
+    word-break: break-word;
 }
