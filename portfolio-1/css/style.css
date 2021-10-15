@@ -1188,6 +1188,7 @@ img {
     /* background-color: red; */
     flex: 0 0 100%;
     max-width: 100%;
+    margin-top: 50px;
 }
 .contact-section .w-50{
     /* background: red; */
@@ -1203,11 +1204,25 @@ img {
 .contact-section .input-group:after {
     border-radius: 30px;    
 }
-.contact-section .input-group .input-group {
+.contact-section .input-group .input-control {
     height: 45px;
     display: block;
     width: 100%;
     border-radius: 30px;
     border: none;
     background-color: transparent;
+    font-size: 16px;
+    padding: 0 15px;
+    color: var(--text-black-700);
+}
+.contact-section .input-group textarea.input-control {
+    height: 184px;
+    padding-top: 15px;
+    resize: none;
+}
+.contact-section .submit-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: right;
+    padding: 0 15px;
 }
