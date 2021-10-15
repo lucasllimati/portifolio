@@ -1200,6 +1200,9 @@ img {
     transition: all 0.3s ease;
     border-radius: 30px;
 }
+.contact-section .input-group:after {
+    border-radius: 30px;    
+}
 .contact-section .input-group .input-group {
     height: 45px;
     display: block;
