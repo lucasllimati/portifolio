@@ -241,3 +241,10 @@ function bodyScrollingToggle() {
   slider()
 
 })();
+
+
+// hide all section except active
+(() => {
+  const sections = document.querySelectorAll(".section");
+  console.log(sections);
+})();
