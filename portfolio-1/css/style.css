@@ -104,6 +104,7 @@ img {
     border-radius: 30px;
     translate: all 0.3s ease;
     display: inline-block;
+    border: none;
 }
 .btn-1:after {
     border-radius: 30px;
@@ -1182,4 +1183,28 @@ img {
     line-height: 26px;
     margin: 0;
     word-break: break-word;
+}
+.contact-section .contact-form {
+    /* background-color: red; */
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact-section .w-50{
+    /* background: red; */
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.contact-section .input-group {
+    margin: 0 0 25px;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+.contact-section .input-group .input-group {
+    height: 45px;
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: transparent;
 }
