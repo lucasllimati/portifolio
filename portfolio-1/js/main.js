@@ -10,13 +10,21 @@
 
   function showNavMenu() {
     navMenu.classList.toggle("open");
+    bodyScrollingToggle();
   }
   function hideNavMenu() {
     navMenu.classList.remove("open");
+    fadeOutMenu()
+    bodyScrollingToggle();
   }
+  function fadeOutMenu() {
+    document.querySelector("fade-out-effect").classList.add("active");
+    setTimeout(() => {
+      document.querySelector("fade-out-effect").classList.remove("active");
 
+    },300)
+  }
 })();
-
 
 
 // about section tabs
