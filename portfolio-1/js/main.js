@@ -14,16 +14,25 @@
   }
   function hideNavMenu() {
     navMenu.classList.remove("open");
-    fadeOutMenu()
+    fadeOutEffect()
     bodyScrollingToggle();
   }
-  function fadeOutMenu() {
-    document.querySelector("fade-out-effect").classList.add("active");
+  function fadeOutEffect() {
+    document.querySelector(".fade-out-effect").classList.add("active");
     setTimeout(() => {
-      document.querySelector("fade-out-effect").classList.remove("active");
-
+      document.querySelector(".fade-out-effect").classList.remove("active");
     },300)
   }
+
+  //attach and event gandler to documentos
+  document.addEventListener("click", (event) => {
+    if(event.target.classList.contains('link-item')) {
+      console.log("event.target contains 'link-item' class");
+    }
+    else {
+      console.log("event.target NOT contains 'link-item' class");
+    }
+  })
 })();
 
 
@@ -215,7 +224,6 @@ function bodyScrollingToggle() {
       popup.scrollTo(0, projectDetailsContainer.offsetTop);
     }
   }
-
 })();
 
 
@@ -269,7 +277,6 @@ function bodyScrollingToggle() {
     sliderContainer.style.marginLeft = - (slideWidth * slideIndex) + "px";
   }
   slider()
-
 })();
 
 
