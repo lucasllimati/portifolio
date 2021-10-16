@@ -42,6 +42,15 @@
         document.querySelector(hash).classList.remove("hide");
 
         // deactivate existing active navigation menu 'link-item'
+        navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
+        navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+
+        // activate new navigation menu 'link-item'
+        event.target.classList.add("active", "inner-shadow");
+        event.target.classList.remove("outer-shadow", "hover-in-shadow");
+
+        // hide navigation menu
+        hideNavMenu();
       }
     }
   })
