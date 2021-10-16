@@ -6,9 +6,13 @@
   closeNavBtn = document.querySelector(".close-nav-menu");
 
   hamburgerBtn.addEventListener("click", showNavMenu);
+  closeNavBtn.addEventListener("click", hideNavMenu);
 
   function showNavMenu() {
-    
+    navMenu.classList.toggle("open");
+  }
+  function hideNavMenu() {
+    navMenu.classList.remove("open");
   }
 
 })();
