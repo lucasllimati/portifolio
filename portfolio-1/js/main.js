@@ -1,5 +1,16 @@
+// navigation menu item
+(() => {
+
+  const hamburgerBtn = document.querySelector(".hamburger-btn"),
+  navMenu = document.querySelector(".nav-menu"),
+
+})();
+
+
+
 // about section tabs
 (() => {
+
   const aboutSection = document.querySelector(".about-section"),
     tabsContainer = document.querySelector(".about-tabs");
 
@@ -245,6 +256,11 @@ function bodyScrollingToggle() {
 
 // hide all section except active
 (() => {
+
   const sections = document.querySelectorAll(".section");
-  console.log(sections);
+  sections.forEach((section) => {
+    if(!section.classList.contains("active")) {
+      section.classList.add("hide");
+    }
+  })
 })();
