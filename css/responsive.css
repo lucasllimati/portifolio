@@ -8,7 +8,7 @@
 
 
 @media(max-width: 767px) {
-    .testi-item .active,
+    /* .testi-slider-container .testi-item .active, */
     .contact-section .w-50,
     .contact-section .contact-item,
     .portfolio-popup .description,
