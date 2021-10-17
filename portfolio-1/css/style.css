@@ -989,7 +989,7 @@ img {
 }
 .portfolio-popup .pp-title h2 {
     font-size: 28px;
-    color: var(--text-black-900);
+    color: var(--text-black-700);
     text-transform: capitalize;
     font-weight: 600;
     margin: 0 0 5px;
