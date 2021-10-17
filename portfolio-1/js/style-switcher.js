@@ -11,3 +11,18 @@ window.addEventListener("scroll", () => {
         document.querySelector(".style-switcher").classList.remove("open");
     }
 })
+
+
+// theme colors
+const alternateStyle = document.querySelectorAll(".alternate-style");
+console.log(alternateStyle);
+function setActiveStyle(color) {
+    alternateStyle.forEach((style) => {
+        if(color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        }
+        else {
+            style.setAttribute("disabled", "true");    
+        }
+    })
+}
