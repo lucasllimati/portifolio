@@ -15,6 +15,7 @@ window.addEventListener("scroll", () => {
 
 // theme colors
 const alternateStyle = document.querySelectorAll(".alternate-style");
+
 console.log(alternateStyle);
 function setActiveStyle(color) {
     alternateStyle.forEach((style) => {
@@ -30,6 +31,13 @@ function setActiveStyle(color) {
 
 // theme light and dark mode
 const dayNight = document.querySelector(".day-night");
+
+dayNight.addEventListener("click", () => {
+    dayNight.querySelector("i").classList.add("fa-sun");
+    dayNight.querySelector("i").classList.add("fa-moon");
+    document.body.classList.toggle("dark");
+})
+
 window.addEventListener("load", () => {
     if(document.body.classList.contains("dark")) {
         dayNight.querySelector("i").classList.add("fa-sun");
